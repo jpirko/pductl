@@ -1,0 +1,28 @@
+[sw1]
+power_on = cyberpdu pdu1 sw1 on
+power_off = cyberpdu pdu1 sw1 off
+power_status = cyberpdu pdu1 sw1 |grep "is on"
+[sw2]
+power_on = cyberpdu pdu1 sw2 on
+power_off = cyberpdu pdu1 sw2 off
+power_status = cyberpdu pdu1 sw2 |grep "is on"
+[sw3]
+power_on = cyberpdu pdu1 sw3 on
+power_off = cyberpdu pdu1 sw3 off
+power_status = cyberpdu pdu1 sw3 |grep "is on"
+[peanut]
+power_on = cyberpdu pdu1 peanut on
+power_off = cyberpdu pdu1 peanut off
+power_status = cyberpdu pdu1 peanut |grep "is on"
+[butter]
+power_on = cyberpdu pdu1 butter on
+power_off = cyberpdu pdu1 butter off
+power_status = cyberpdu pdu1 butter |grep "is on"
+[linksys]
+power_on = cyberpdu pdu1 linksys on
+power_off = cyberpdu pdu1 linksys off
+power_status = cyberpdu pdu1 linksys |grep "is on"
+[salt]
+power_on = ipmitool -I lanplus -H 172.22.4.16 -U root -P calvin power on
+power_off = ipmitool -I lanplus -H 172.22.4.16 -U root -P calvin power on
+power_status = ipmitool -I lanplus -H 172.22.4.16 -U root -P calvin power status |grep "is on"
